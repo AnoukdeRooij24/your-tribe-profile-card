@@ -1,6 +1,5 @@
-const expandButton = document.querySelector('header button')
-expandButton.addEventListener('click', expand)
+//selects the FIRST occurence of <button>;
+var button = document.querySelector("button")
+var element = document.querySelector("div")
 
-function expand () {
-  document.body.classList.toggle('expand')
-}
+button.addEventlistener("Click", function {element.classlist.toggle("yay")})
