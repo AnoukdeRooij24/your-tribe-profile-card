@@ -12,14 +12,9 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #0, 0, 0, 0.1;
+  color: #000000;
 }
 
-h1:hover {
-  font-size: 2em;
-}
-
-}
 article {
   position: relative;
   display: flex;
@@ -31,8 +26,8 @@ article {
   min-width: 20em;
   border-radius: 1rem;
   background: rgb(177, 216, 183, 1);
-  background: ( rgba(177, 216, 183, 1) 100%, #4e54c8 100%);
-  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(0deg, rgb(177, 216, 183, 1); 40%, #4e54c8 100%);
+  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   transition: .25s;
 }
 
@@ -46,7 +41,7 @@ header {
 
 h1 {
   margin: 2rem 0 1rem;
-  color: rgba(#000000);
+  color: rgb(0, 0, 0);
 }
 
 button {
@@ -74,7 +69,7 @@ svg {
   position: absolute;
   top: calc(1.25rem - 12px);
   left: calc(1.25rem - 12px);
-  stroke: #4e54c8;
+  stroke:rgba(#b1d8b7);
   transition-delay: .25s;
 }
 button svg:nth-of-type(2) {
@@ -136,13 +131,8 @@ dd:nth-of-type(2){
   transform: translateY(1rem);
 }
 
-p { }
-
-div {
-  margin: 2rem}
-
-div.yay { 
-  color: rgb(249, 245, 239, 1);
+p { 
+  margin: 0;
 }
 
 article > p {
@@ -152,6 +142,34 @@ article > p {
   border-radius: 0 0 1rem 1rem;
   text-align: center;
   background: rgba(255,255,255, 0.5);
+}
+
+/* expand content */
+body.expand {
+  font-size: 1.15em;
+}
+
+body.expand article {
+  width: 60vw;
+  max-width: 60vw;
+}
+
+body.expand button svg:first-of-type {
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+body.expand button svg:nth-of-type(2) {
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+body.expand dd {
+  font-size: 1.75em;
+}
+
+body.expand img {
+  width: 15em;
 }
 
 
